@@ -41,6 +41,9 @@ public class CharaMove : MonoBehaviour
         if (Input.GetKeyDown("left")) MoveToLeft();
         if (Input.GetKeyDown("right")) MoveToRight();
         if (Input.GetKeyDown("space")) Jump();
+        if (Input.GetKeyDown("down")) Sliding();
+
+    
 
         float acceleratedZ = moveDirection.z + (accelerationZ * Time.deltaTime);
         moveDirection.z = Mathf.Clamp(acceleratedZ, 0, speedZ);
@@ -72,11 +75,24 @@ public class CharaMove : MonoBehaviour
 
     public void Jump()
     {
-        if (controller.isGrounded)
-        {
+        // 下のif文でジャンプの回数制限。地面についているときだけジャンプ可能
+        // if (controller.isGrounded)
+        // {
+            
             moveDirection.y = speedJump;
 
             animator.SetTrigger("jump");
+        // }
+    }
+
+    public void Sliding()
+    {
+        if (controller.isGrounded)
+        {
+            // moveDirection.y = speedJump;
+            Debug.Log("下矢印");
+
+            animator.SetTrigger("sliding");
         }
     }
 

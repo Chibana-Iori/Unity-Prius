@@ -13,6 +13,10 @@ public class ClashJudge : MonoBehaviour
      Debug.Log("Clash");
             SceneManager.LoadScene("GameOver");
           }
+          if(collision.gameObject.CompareTag("Cube3")){
+     Debug.Log("Clash");
+            SceneManager.LoadScene("GameOver");
+          }
     }
 
 // Start is called before the first frame update

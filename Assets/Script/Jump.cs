@@ -14,7 +14,7 @@ AudioSource audioSource;
 
  void Update () {
    // 左
-  if (Input.GetKey (KeyCode.Space)) {
+  if (Input.GetKeyDown(KeyCode.Space)) {
    //音(sound1)を鳴らす
     audioSource.PlayOneShot(sound1);
    }
