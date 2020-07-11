@@ -21,6 +21,7 @@ public class CharaMove : MonoBehaviour
 
     //それぞれのパラメーターの設定をInspectorで変える様にします。
     public float gravity;
+    float first_gravity = 10;
     public float speedZ;
     public float speedX;
     public float speedJump;
@@ -37,6 +38,7 @@ public class CharaMove : MonoBehaviour
     
     void Update()
     {
+        if (controller.isGrounded) gravity = 10;
         //それぞれの矢印が押されたらそれぞれの関数を実行します。
         if (Input.GetKeyDown("left")) MoveToLeft();
         if (Input.GetKeyDown("right")) MoveToRight();
@@ -65,12 +67,14 @@ public class CharaMove : MonoBehaviour
     //新しく作った関数のそれぞれの処理。
     public void MoveToLeft()
     {
-        if (controller.isGrounded && targetLane > MinLane) targetLane--;
+        // if (controller.isGrounded && targetLane > MinLane) targetLane--;
+        if (targetLane > MinLane) targetLane--;
     }
 
     public void MoveToRight()
     {
-        if (controller.isGrounded && targetLane < MaxLane) targetLane++;
+        // if (controller.isGrounded && targetLane < MaxLane) targetLane++;
+        if (targetLane < MaxLane) targetLane++;
     }
 
     public void Jump()
@@ -78,7 +82,7 @@ public class CharaMove : MonoBehaviour
         // 下のif文でジャンプの回数制限。地面についているときだけジャンプ可能
         // if (controller.isGrounded)
         // {
-            
+
             moveDirection.y = speedJump;
 
             animator.SetTrigger("jump");
@@ -93,7 +97,10 @@ public class CharaMove : MonoBehaviour
             Debug.Log("下矢印");
 
             animator.SetTrigger("sliding");
+        }else{
+            gravity = 50;
         }
+    
     }
 
 }
