@@ -4958,6 +4958,11 @@ PrefabInstance:
       propertyPath: NoiseModule.separateAxes
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3250104213841648398, guid: 7343beb822de849b49eb6d2f07813243,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5720271843669279793, guid: 7343beb822de849b49eb6d2f07813243,
         type: 3}
       propertyPath: m_Name

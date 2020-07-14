@@ -25,8 +25,6 @@ public class EnemyGenerator : MonoBehaviour
 
     public int enemycount = 0;
 
-    public GameObject particle;//Particleを宣言
-
     // Start is called before the first frame update
     void Start()
     {
@@ -84,17 +82,6 @@ public class EnemyGenerator : MonoBehaviour
         GameObject oldenemy = enemy;
         Destroy(oldenemy);
         enemycount -= 1;
-    }
-
-    void OnCollisionEnter(Collision other)
-    {
-        //衝突したオブジェクトがSphereだったらParticleを発生させる
-        if (other.gameObject.name == "Player")
-        {
-            Instantiate(particle, transform.position, transform.rotation);
-
-
-        }
     }
 
 }
