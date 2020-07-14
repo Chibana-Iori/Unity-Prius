@@ -25,7 +25,9 @@ public class CharaMove : MonoBehaviour
     public float speedX;
     public float speedJump;
     public float accelerationZ;
-    
+
+   
+
     void Start()
     {
         //GetComponentでCharacterControllerwp取得して変数controllseで参照します。
@@ -34,7 +36,7 @@ public class CharaMove : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    
+
     void Update()
     {
         //それぞれの矢印が押されたらそれぞれの関数を実行します。
@@ -56,7 +58,7 @@ public class CharaMove : MonoBehaviour
         if (controller.isGrounded) moveDirection.y = 0;
 
         animator.SetBool("run", moveDirection.z > 0.0f);
-        
+
     }
 
     //新しく作った関数のそれぞれの処理。
@@ -80,4 +82,5 @@ public class CharaMove : MonoBehaviour
         }
     }
 
+  
 }
