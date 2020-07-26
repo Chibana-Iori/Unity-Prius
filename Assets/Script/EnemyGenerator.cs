@@ -39,7 +39,7 @@ public class EnemyGenerator : MonoBehaviour
         time += Time.deltaTime;
 
         //経過時間が生成時間になったとき(生成時間より大きくなったとき)
-        if ((time > interval) && (enemycount < 2))
+        if (time > interval)
         {
             //enemyをインスタンス化する(生成する)
             enemy = Instantiate(enemyPrefab);
@@ -77,6 +77,14 @@ public class EnemyGenerator : MonoBehaviour
         return new Vector3(x, y, z);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            DestroyEnemy();
+        }
+    }
+
     void DestroyEnemy()
     {
         GameObject oldenemy = enemy;
@@ -84,4 +92,5 @@ public class EnemyGenerator : MonoBehaviour
         enemycount -= 1;
     }
 
+   
 }
