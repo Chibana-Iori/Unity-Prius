@@ -91,3 +91,5 @@ crashlytics-build.properties
 #Assets SampleScenes
 /Assets/SampleScenes/
 
+/PriusRun_Test_iOS/
+
