@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ClashJudge : MonoBehaviour
 {
+    public GameObject particle;//Particleを宣言
     void OnCollisionEnter(Collision collision)
     {
         // Debug.Log("Clash3");
@@ -17,6 +18,12 @@ public class ClashJudge : MonoBehaviour
      Debug.Log("Clash");
             SceneManager.LoadScene("GameOver");
           }
+          if(collision.gameObject.CompareTag("Enemy")){
+              Instantiate(particle, transform.position, transform.rotation);
+              Destroy(collision.gameObject);
+              Debug.Log("Clash");
+              SceneManager.LoadScene("GameOver");
+              }
     }
 
 // Start is called before the first frame update
