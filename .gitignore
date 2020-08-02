@@ -87,6 +87,8 @@ crashlytics-build.properties
 
 #Assets NejikoRun-master
 /Assets/NejikoRun-master/
+/Assets/NejikoRun-master.meta
+
 
 #Assets SampleScenes
 /Assets/SampleScenes/
