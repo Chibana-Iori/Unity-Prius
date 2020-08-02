@@ -82,17 +82,25 @@ public class CharaMove : MonoBehaviour
     void FixedUpdate(){
         if (Move){
             switch (Direction){
+            //右移動
             case "right":
             MoveToRight();
+            Move=false;
             break;
+            //左移動
             case "left":
             MoveToLeft();
+            Move=false;
             break;
+            //ジャンプ
             case "up":
             Jump();
+            Move=false;
             break;
+            //スライディング
             case "down":
             Sliding();
+            Move=false;
             break;
             case "touch":
             break;
