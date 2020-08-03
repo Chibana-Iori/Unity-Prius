@@ -13,6 +13,7 @@ public class ResultScore : MonoBehaviour
         int result = ScoreManager.score_num;
         Text score_text = score_object.GetComponent<Text> ();
         score_text.text = "Score:"+ result;
+        ScoreManager.score_num=0;
     }
 
 // Update is called once per frame
