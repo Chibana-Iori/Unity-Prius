@@ -195,8 +195,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656607961}
-  m_LocalRotation: {x: -0.09465752, y: 0.014927018, z: 0.0014197009, w: 0.995397}
-  m_LocalPosition: {x: 706.3014, y: -66.49162, z: -831.66736}
+  m_LocalRotation: {x: -0.15407535, y: 0.03851884, z: 0.006011422, w: 0.9872897}
+  m_LocalPosition: {x: 0.31728458, y: -23.647165, z: -70.84584}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -303,6 +303,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &789875160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 4802632977996987562}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 789875161}
+  m_Layer: 0
+  m_Name: Bomb (Missing Prefab) (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &789875161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 4802632977996987562}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789875160}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &842812050
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,8 +636,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121369502}
-  m_LocalRotation: {x: -0.09465752, y: 0.014927018, z: 0.0014197009, w: 0.995397}
-  m_LocalPosition: {x: 706.3014, y: -66.49162, z: -831.66736}
+  m_LocalRotation: {x: -0.15407535, y: 0.03851884, z: 0.006011422, w: 0.9872897}
+  m_LocalPosition: {x: 0.31728458, y: -23.647165, z: -70.84584}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -901,8 +931,8 @@ MonoBehaviour:
   stageTips:
   - {fileID: 5459113683697552744, guid: 93028f1a8144544749fb785556f321b4, type: 3}
   - {fileID: 4681938985612139601, guid: 645359f0306ed4c2fb8ceeff2f8b3585, type: 3}
-  startTipIndex: 0
-  preInstantiate: 0
+  startTipIndex: 1
+  preInstantiate: 2
   generatedStageList:
   - {fileID: 5459113683697552744, guid: 93028f1a8144544749fb785556f321b4, type: 3}
   - {fileID: 4681938985612139601, guid: 645359f0306ed4c2fb8ceeff2f8b3585, type: 3}
