@@ -24,6 +24,12 @@ public class ClashJudge : MonoBehaviour
               Debug.Log("Clash");
               SceneManager.LoadScene("GameOver");
               }
+            if(collision.gameObject.CompareTag("Bomb")){
+                Instantiate(particle, transform.position, transform.rotation);
+                Destroy(collision.gameObject);
+                Debug.Log("Clash");
+                SceneManager.LoadScene("GameOver");
+                }
     }
 
 // Start is called before the first frame update
