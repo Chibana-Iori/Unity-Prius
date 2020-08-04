@@ -7,6 +7,8 @@ TagManager:
   - Cube
   - Cube1
   - Cube3
+  - Enemy
+  - Bomb
   layers:
   - Default
   - TransparentFX

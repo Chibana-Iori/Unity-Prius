@@ -14,22 +14,41 @@ public class ClashJudge : MonoBehaviour
      Debug.Log("Clash");
             SceneManager.LoadScene("GameOver");
           }
-          if(collision.gameObject.CompareTag("Cube3")){
+        if(collision.gameObject.CompareTag("Cube3")){
      Debug.Log("Clash");
             SceneManager.LoadScene("GameOver");
           }
-          if(collision.gameObject.CompareTag("Enemy")){
+        if(collision.gameObject.CompareTag("Enemy")){
               Instantiate(particle, transform.position, transform.rotation);
               Destroy(collision.gameObject);
               Debug.Log("Clash");
               SceneManager.LoadScene("GameOver");
               }
-            if(collision.gameObject.CompareTag("Bomb")){
+        if(collision.gameObject.CompareTag("Bomb")){
                 Instantiate(particle, transform.position, transform.rotation);
                 Destroy(collision.gameObject);
                 Debug.Log("Clash");
                 SceneManager.LoadScene("GameOver");
                 }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        
+        
+        if(other.gameObject.CompareTag("Enemy")){
+
+            Debug.Log("Enemy");
+            SceneManager.LoadScene("GameOver");
+
+
+        }
+        if(other.gameObject.CompareTag("Bomb")){
+
+            Debug.Log("Bomb");
+            SceneManager.LoadScene("GameOver");
+
+        }
     }
 
 // Start is called before the first frame update
