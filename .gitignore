@@ -92,4 +92,7 @@ crashlytics-build.properties
 /Assets/SampleScenes/
 
 /PriusRun_Test_iOS
-
+/Assets/VRM.meta
+/Assets/VRM/
+/Assets/VRMShaders/
+/Assets/キャラ/
